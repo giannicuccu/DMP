@@ -1,0 +1,71 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    line-height: 3.2rem;
+    font-family: 'Hind', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    padding: 0 2rem;
+}
+
+header,
+main,
+section,
+footer {
+    max-width: 94.8rem;
+    /* 948px */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.headertop {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 0.5rem solid #8295ab;
+    padding-top: 6.4rem;
+    padding-bottom: 2.2rem;
+    margin-bottom: 2.7rem;
+}
+
+#logo {
+    max-width: 7.6rem;
+}
+
+.headerleftbox {
+    padding-left: 4rem;
+    text-align: right;
+}
+
+.maintitle {
+    font-size: 5.8rem;
+    line-height: 4.8rem;
+    font-family: "raleway";
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: .9rem;
+    color: #2c3c48;
+}
+
+.mainsubtitle {
+    font-size: 2rem;
+    font-family: "raleway";
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #2c3c48;
+}
+
+.hero img {
+    max-width: 100%;
+}
