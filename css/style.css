@@ -18,7 +18,8 @@ main,
 section,
 footer {
     max-width: 94.8rem;
-    /* 948px */
+    /* max width = 948px */
+
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -32,7 +33,7 @@ footer {
     flex-flow: row;
     justify-content: space-between;
     align-items: flex-start;
-    border-bottom: 0.5rem solid #22D2D3;
+    border-bottom: 0.5rem solid #22d2d3;
     padding-top: 6.4rem;
     padding-bottom: 2.2rem;
     margin-bottom: 2.7rem;
@@ -127,7 +128,7 @@ footer {
     text-align: center;
     font-size: 1.5rem;
     text-decoration: none;
-    color: #22D2D3;
+    color: #22d2d3;
 }
 
 .projurl:hover {

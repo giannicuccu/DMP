@@ -18,23 +18,31 @@
         </div>
     </header>
     <section class=hero>
-        <img src="img-src/hero.jpg" alt="frontend developer desk">
+        <picture>
+            <!-- small jpg hero image for smarphones 
+                TODO: add webp versions          -->
+            <source type="image/jpg" srcset="img/hero-412.jpg 1x, img/hero-medium.jpg 2x" media="(max-width: 412px)">
+            <!-- medium jpg/webp @ 1x and 2x  for tablets/desktops -->
+            <source type="image/webp" srcset="img/hero-medium.webp 1x, img/hero-medium-2x.webp 2x">
+            <source type="image/jpg" srcset="img/hero-medium.jpg 1x, img/hero-medium-2x.jpg 2x">
+            <img src="img/hero-medium.jpg"  alt="frontend developer desk">
+        </picture>
     </section>
     <section class=works>
         <h2 class=featheading>Featured Projects</h2>
         <p class=featdescr>Some of my projects from Udacity Frontend Developer Nanodegree program</p>
         <article class=workdetails>
-            <img class=projthumb src="img-src/pam.jpg" alt="Project PAM screenshot">
+            <img class=projthumb src="img/pam-small.jpg" srcset="img/pam-small-2x.jpg 2x" alt="Project PAM screenshot">
             <h3 class=projname>Pixel art maker</h3>
             <a class=projurl href="https://giannicuccu.github.io/UDCT/PAM/index.html" target=_blank title="Pixel Art Maker proj">giannicuccu.github.io/UDCT/PAM</a>
         </article>
         <article class=workdetails>
-            <img  class=projthumb  src="img-src/rimg.jpg" alt="Project images blog screenshot">
+            <img  class=projthumb  src="img/rimg-small.jpg" srcset="img/rimg-small-2x.jpg 2x" alt="Project images blog screenshot">
             <h3 class=projname>Images blog</h3>
             <a class=projurl href="https://giannicuccu.github.io/UDCT/RIMG/" target=_blank title="Responsive images proj">giannicuccu.github.io/UDCT/RIMG</a>
         </article>
         <article class=workdetails>
-            <img  class=projthumb src="img-src/rwd.jpg" alt="Project Brighton Times screenshot">
+            <img  class=projthumb src="img/rwd-small.jpg" srcset="img/rwd-small-2x.jpg 2x" alt="Project Brighton Times screenshot">
             <h3 class=projname>The Brighton Times</h3>
             <a class=projurl href="https://giannicuccu.github.io/UDCT/RWD/" target=_blank title="The Brighton Times responsive app">giannicuccu.github.io/UDCT/RWDF</a>
         </article>
