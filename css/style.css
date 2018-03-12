@@ -16,6 +16,7 @@ body * {
 header,
 main,
 section,
+nav,
 footer {
     max-width: 94.8rem;
     /* max width = 948px */
@@ -36,7 +37,7 @@ footer {
     border-bottom: 0.5rem solid #22d2d3;
     padding-top: 6.4rem;
     padding-bottom: 2.2rem;
-    margin-bottom: 2.7rem;
+    /* margin-bottom: 2.7rem; */
 }
 
 #logo {
@@ -63,6 +64,69 @@ footer {
     text-transform: uppercase;
     color: #2e4146;
 }
+
+/*
+ *
+ * Top Level Navigation
+ *
+ */
+
+ #menuToggler {
+    display: none;
+  }
+  
+  #menuToggleLabel {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    right: 2rem;
+    top: 2.8rem;
+    display: none;
+    outline: none;
+    z-index: 11;
+    color:#fff;
+  }
+  
+  #menuToggleLabel span {
+    display: block;
+    text-indent: -9999px;
+  }
+
+ .nav {
+    transition: transform 0.5s ease-in-out;
+    margin: 0 auto;
+  }
+  
+  .navlist {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 5rem;
+  }
+  
+  .navitem {
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: right;
+    line-height: 2rem;
+    flex-grow: 0.05;
+    text-transform: uppercase;
+  }
+
+
+  
+  .nav a {
+    text-decoration: none;
+    color: #22d2d3;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: right;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+    color: #22d2d3;
+      }
 
 .hero {
     margin-bottom: 0;
@@ -191,36 +255,107 @@ footer {
 @media screen and (max-width:412px) {
     .headertop {
         margin-bottom: 0;
-        padding-top: 2.4rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding:1.5rem 2rem;
         position: fixed;
-        background: #fff;
+        background: #22d2d3;
         width: 100vw;
         margin: 0 -2rem;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
         border-bottom: none;
+        justify-content: flex-start;
+        z-index: 9;
+    }
+
+    .headerleftbox {
+        padding-left: 1rem;
+        text-align: left;
+    }
+    
+    .maintitle {
+        font-size: 3rem;
+        line-height: 2.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0.4rem 0 -0.4rem 0;
+        color: #fff;
+    }
+    
+    .mainsubtitle {
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 2rem;
     }
 
     #logo {
         max-width: 4.6rem;
     }
 
-    .maintitle {
-        font-size: 3rem;
-        line-height: 2.8rem;
-        margin-bottom: 0;
-    }
+   .nav {
+        display: block;
+        position: fixed;
+        width: 25rem;
+        transform: translate3d(25rem, 0, 0);
+        height: 100vh;
+        top: 0;
+        right: 0;
+        background: #22d2d3;
+        z-index: 8;
+      }
+      #menuToggler:checked~nav {
+        transform: none;
+      }
+      #menuToggleLabel {
+        display: block;
+      }
+      #menuToggleLabel:before {
+        content: '\2630';
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        
+      }
+      #menuToggler:checked+#menuToggleLabel:before {
+        content: '\2716';
+      }
+
+      #menuToggler:checked + section {
+        display: none
+      }
+
+      /*off canvas items style*/
+      .navlist {
+        display: block;
+        padding-top: 8rem;
+      }
+      .nav li {
+        display: block;
+        border-bottom: 1px solid #fff;
+      }
+      .nav li a {
+        display: block;
+        font-size: 1.5rem;
+        color:#fff;
+        padding: 2.4rem;
+        text-align: center;
+      }
 
     .hero {
-        padding-top: 10.5rem;
+        padding-top: 7.5rem;
         width: 100vw;
         margin: 0 -2rem 4rem -2rem;
     }
+
     .works h2 {
         padding-left: 0rem;
         text-align: center;
         /* background: red; */
+    }
+
+    .featdescr{
+        margin-bottom: 5rem;
     }
 
     .workdetails {
